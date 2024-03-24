@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gráficas Generadas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Gráficas Generadas:</h1>
-    <img src="{{ url_for('static', filename='graficas.png') }}" alt="Gráfica de ejemplo">
+    <div class="container">
+        <h1>Gráficas Generadas:</h1>
+        <div class="graficas">
+            <img src="{{ url_for('static', filename='graficas.png') }}" alt="Gráfica 1" class="grafica">
+        </div>
+    </div>
 </body>
 </html>
+

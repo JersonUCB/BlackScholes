@@ -4,26 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de Gráficas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Ingrese los valores para generar las gráficas:</h1>
-    <form action="/generar_graficas" method="POST">
-        <label for="SO">SO:</label>
-        <input type="text" name="SO" id="SO" step="any" required><br><br>
+    <div class="container">
+        <h1>Black Scholes</h1>
+        <form action="/generar_graficas" method="POST" class="form">
+            <label>Ingrese los valores para generar las gráficas:</label>
+            <label for="SO">SO: (Precio actual del activo subyacente)</label>
+            <input type="text" name="SO" id="SO" step="any" required><br><br>
 
-        <label for="k">k:</label>
-        <input type="text" name="k" id="k" step="any" required><br><br>
+            <label for="k">k: (Precio de ejercicio)</label>
+            <input type="text" name="k" id="k" step="any" required><br><br>
 
-        <label for="T">T:</label>
-        <input type="text" name="T" id="T" step="any" required><br><br>
+            <label for="T">T: (Tiempo hasta la expiración en años)</label>
+            <input type="text" name="T" id="T" step="any" required><br><br>
 
-        <label for="r">r:</label>
-        <input type="text" name="r" id="r" step="any" required><br><br>
+            <label for="r">r: (Tasa de interés libre de riesgo)</label>
+            <input type="text" name="r" id="r" step="any" required><br><br>
 
-        <label for="sigma">sigma:</label>
-        <input type="text" name="sigma" id="sigma" step="any" required><br><br>
+            <label for="sigma">sigma: (Volatilidad)</label>
+            <input type="text" name="sigma" id="sigma" step="any" required><br><br>
 
-        <button type="submit">Generar Gráficas</button>
-    </form>
+            <button type="submit">Generar Gráficas</button>
+        </form>
+    </div>
 </body>
 </html>
